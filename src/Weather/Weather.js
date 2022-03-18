@@ -5,7 +5,9 @@ export default function Weather() {
     // const [state, setState] = useState({
     //     opacity: 1
     // })
-    const [weatherState, setNameCity] = useState({})
+    const [weatherState, setWeatherState] = useState({
+        nameCity: ''
+    })
     const storeState = useSelector(state => state.Reducer)
     return (
         <div style={{ opacity: storeState.opacity }}>
@@ -16,8 +18,8 @@ export default function Weather() {
 
                         <form className="submit">
 
-                            <input type="" className="form-control" id="" aria-describedby="" onChange={(e) => {
-                                setNameCity({
+                            <input type="" className="form-control" id="" value={weatherState.nameCity} aria-describedby="" onChange={(e) => {
+                                setWeatherState({
                                     nameCity: e.target.value
                                 })
                             }} placeholder='Input City Name' />
