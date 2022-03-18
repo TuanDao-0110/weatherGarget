@@ -1,0 +1,14 @@
+.bg {
+    background: url("./bg.png") center no-repeat;
+    height: 500px;
+    width: 1000px;
+    justify-content: center;
+    margin: auto;
+}
+
+.dark {
+    background-color: #262626;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
