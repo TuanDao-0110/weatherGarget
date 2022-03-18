@@ -29,6 +29,9 @@ export default function Weather() {
                                     type: "GET_API",
                                     nameCity: weatherState.nameCity
                                 })
+                                setWeatherState({
+                                    nameCity: ''
+                                })
                             }}> Check</button>
                         </form>
 
