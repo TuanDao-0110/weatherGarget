@@ -16,14 +16,14 @@ export default function Weather() {
                 <div className="row d-flex justify-content-center px-3">
                     <div className="card">
 
-                        <form className="submit">
+                        <form className="submit mt-3 m-auto w-75">
 
-                            <input type="" className="form-control" id="" value={weatherState.nameCity} aria-describedby="" onChange={(e) => {
+                            <input type="" style={{ background: 'none', border: 'none', color: '#fff' }} className="form-control " id="" value={weatherState.nameCity} aria-describedby="" onChange={(e) => {
                                 setWeatherState({
                                     nameCity: e.target.value
                                 })
-                            }} placeholder='Input City Name' />
-                            <button className='btn btn-light' type='submit' onClick={(e) => {
+                            }} placeholder='INPUT CITY NAME' />
+                            <button className='btn btn-light' style={{ display: 'none' }} type='submit' onClick={(e) => {
                                 e.preventDefault()
                                 dispatch({
                                     type: "GET_API",
@@ -35,7 +35,7 @@ export default function Weather() {
                             }}> Check</button>
                         </form>
 
-                        <h2 className="ml-auto text-light mr-4 mt-3 mb-0">{storeState.cityData.name}</h2>
+                        <h2 className="ml-auto text-light mr-4 mt-1 mb-0">{storeState.cityData.name}</h2>
                         <p className="ml-auto text-light mr-4 mb-0 med-font">{storeState.cityData.weather}</p>
                         <h1 className="ml-auto text-light mr-4 large-font">{storeState.cityData.temp}&#176;</h1>
                         <p className="time-font text-light mb-0 ml-4 mt-auto"> {storeState.cityData.feelLike}° <span className="sm-font">Feel Like</span></p>

@@ -16,7 +16,7 @@ function* getTaskApiAction(action) {
             })
         })
         yield delay(500)
-        
+        console.log(data)
         yield put({
             type: DO_IT,
             data
