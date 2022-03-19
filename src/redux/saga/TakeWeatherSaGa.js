@@ -11,7 +11,7 @@ function* getTaskApiAction(action) {
         yield delay(500)
         let { data, status } = yield call(() => {
             return axios({
-                url: `HTTP://api.openweathermap.org/data/2.5/forecast?q=${nameCity}&appid=460863ced2e6b5f80cdca7445aec9faf&units=metric`,
+                url: `HTTPs://api.openweathermap.org/data/2.5/forecast?q=${nameCity}&appid=460863ced2e6b5f80cdca7445aec9faf&units=metric`,
                 method: "GET"
             })
         })
